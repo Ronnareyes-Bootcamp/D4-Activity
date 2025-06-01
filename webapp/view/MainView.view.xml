@@ -7,8 +7,9 @@
     		floatingFooter="true"
 		class="sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer sapUiResponsivePadding--floatingFooter">
     <VBox id="idVBox" class="sapUiSmallMargin">
+
                 <f:SimpleForm id="idSimpleForm" editable="true" layout="ResponsiveGridLayout" title="Details" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
-                    <f:content>
+                <f:content>
                         <Label id="idLblFName" text="{i18n>firstNameLbl}" />
                         <Input id="idInptFName" value="" />
                         <Label id="idLblLName" text="{i18n>lastNameLbl}" />
@@ -24,46 +25,11 @@
                                 <core:Item id="idItmGCash" text="{i18n>gcashItm}" key="GCASH"/>
                             </items>
                         </Select>
-                    </f:content>
+                        </f:content>
                 </f:SimpleForm>
-                <Table id="idTableSCart" inset="false">
-                    <headerToolbar>
-                        <OverflowToolbar id="idOFT">
-                            <content>
-                                <Title id="idTableTitleSCart" text="{i18n>scartTableTitle}"/>
-                                <ToolbarSpacer id="idTSpacer"/>
-                                <Button id="idBtnAddItems" icon="sap-icon://cart-4" tooltip="Add to Cart" press="onAddItem"/>
-                            </content>
-                        </OverflowToolbar>
-                    </headerToolbar>
-                    <columns>
-                        <Column id="idCol1">
-                            <Text id="idColText1" text="{i18n>coltext1}" />
-                        </Column>
-                        <Column id="idCol2">
-                            <Text id="idColText2" text="{i18n>coltext2}" />
-                        </Column>
-                        <Column id="idCol3">
-                            <Text id="idColText3" text="{i18n>coltext3}" />
-                        </Column>
-                    </columns>
-                    <items>
-                        <ColumnListItem id="idColListItem1" vAlign="Middle">
-                            <cells>
-                                <Text id="idText1" text="{i18n>text1}" />
-                                <Text id="idText2" text="{i18n>text2}" />
-                                <Text id="idText3" text="{i18n>text3}" />
-                            </cells>
-                        </ColumnListItem>
-                        <ColumnListItem id="idColListItem2" vAlign="Middle">
-                            <cells>
-                                <Text id="idText4" text="{i18n>text4}" />
-                                <Text id="idText5" text="{i18n>text5}" />
-                                <Text id="idText6" text="{i18n>text6}" />
-                            </cells>
-                        </ColumnListItem>
-                    </items>
-                </Table>
+            <core:Fragment fragmentName="com.training.exer1reyes.fragment.ShoppingCart" type="XML" />
+
+
 
             </VBox>
                 <footer>
